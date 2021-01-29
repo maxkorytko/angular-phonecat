@@ -91,3 +91,26 @@ h1 {
   font-size: 1.2em;
   font-weight: bold;
 }
+
+@media (max-width: 767px) {
+  .phones li {
+    height: auto;
+  }
+
+  .phones {
+    padding: 0px;
+  }
+
+  .phone-images {
+    width: auto;
+  }
+
+  .phone {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .phone-images {
+    height: auto;    
+  }
+}
