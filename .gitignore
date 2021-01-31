@@ -6,6 +6,6 @@ tmp
 .DS_Store
 .idea
 angular-phonecat-snapshots
-public
+www
 *firebase*
 www
