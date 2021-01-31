@@ -20,7 +20,7 @@ module.exports = {
         { from: "app/img", to: "img" },
         { from: "app/**.css", to: "[name].[ext]" },
         { from: "app/lib/bootstrap", to: "lib/bootstrap" },
-        { from: "app/lib/jquery", to: "lib/jquery" },
+        { from: "app/lib/jquery.js", to: "lib/jquery.js" },
       ],
     }),
 	  new HtmlWebpackPlugin({

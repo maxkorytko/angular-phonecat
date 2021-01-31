@@ -9,9 +9,7 @@
     "angular": "1.8.x",
     "angular-animate": "1.8.x",
     "angular-resource": "1.8.x",
-    "angular-route": "1.8.x",
-    "bootstrap": "3.3.x",
-    "jquery": "3.3.x"
+    "angular-route": "1.8.x"
   },
   "devDependencies": {
     "angular-mocks": "1.8.x",
@@ -30,10 +28,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "postinstall": "npm run copy-libs",
     "update-deps": "npm update",
-    "postupdate-deps": "npm run copy-libs",
-    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist,jquery/dist}/**/*\" app/lib -C",
     "prestart": "npm install",
     "start": "webpack serve --open",
     "build": "rimraf www && webpack --bail --progress --profile",
