@@ -9,6 +9,7 @@
     "@capacitor/cli": "^2.4.6",
     "@capacitor/core": "^2.4.6",
     "@capacitor/ios": "^2.4.6",
+    "@ionic/cli": "^6.12.4",
     "angular": "1.8.x",
     "angular-animate": "1.8.x",
     "angular-resource": "1.8.x",
