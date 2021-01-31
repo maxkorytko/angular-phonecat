@@ -13,6 +13,34 @@ module.exports = {
     filename: 'main.bundle.js',
     path: path.resolve(__dirname, 'www'),
   },
+  module: {
+    rules: [
+      {
+        test: /\.html$/,
+        exclude: [/node_modules/],
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              esModule: false,
+              attributes: false,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1 }
+          },
+        ],
+        sideEffects: true,
+      },
+    ],
+  },
   plugins: [
 	  new CopyPlugin({
       patterns: [

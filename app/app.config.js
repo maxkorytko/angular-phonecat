@@ -2,7 +2,15 @@ import * as angular from 'angular';
 
 angular.
   module('phonecatApp').
-  config(['$routeProvider',
+  config([
+    '$compileProvider',
+    function config($compileProvider) {
+      $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|capacitor):/);
+      $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|capacitor):/);
+    },
+  ]).
+  config([
+    '$routeProvider',
     function config($routeProvider) {
       $routeProvider.
         when('/phones', {
@@ -12,5 +20,5 @@ angular.
           template: '<phone-detail></phone-detail>'
         }).
         otherwise('/phones');
-    }
+    },
   ]);
